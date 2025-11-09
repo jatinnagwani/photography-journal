@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>The Frame Journal — Photography Journal</title>
+  <link rel="icon" type="image/png" href="https://wallpapers.com/images/hd/dark-photography-canon-camera-0m4uiryloc9c9gzv.jpg">
+
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&display=swap" rel="stylesheet">
+
+
+  
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+     background: linear-gradient(145deg, #0b0b0b, #141414, #1b1b1b); 
+     color: #f0f0f0;
+    }
+
+    header {
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    .title {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      color: #bf8863;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 10px;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    nav a {
+      color: #cccccc;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      color: #d3ae8f;
+    }
+
+    .hero {
+      height: 60vh;
+      background-image: url('https://images.pexels.com/photos/1775777/pexels-photo-1775777.jpeg');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      padding: 20px;
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1rem;
+      color: #ccc;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 40px 0;
+    }
+
+    .story {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .story img {
+      width: 100%;
+      max-width: 450px;
+      border-radius: 8px;
+    }
+
+    .story-text {
+      flex: 1;
+      min-width: 280px;
+    }
+
+    .story-text h2 {
+      font-family: 'Playfair Display', serif;
+      color: #f9d36b;
+      margin-bottom: 10px;
+    }
+
+    .story-text p {
+      color: #ccc;
+      line-height: 1.6;
+    }
+
+    .styles {
+      margin-top: 40px;
+    }
+
+    .styles h2 {
+      text-align: center;
+      color: #bf8863;
+      font-family: 'Playfair Display', serif;
+      margin-bottom: 20px;
+    }
+
+    .category {
+      margin-bottom: 40px;
+    }
+
+    .category h3 {
+      font-family: 'Playfair Display', serif;
+      color: #ffffff;
+      margin-bottom: 12px;
+    }
+
+    .photos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 16px;
+    }
+
+    figure {
+      margin: 0;
+      background-color: #1a1a1a;
+      border-radius: 8px;
+      padding: 8px;
+    }
+
+    figure img {
+      width: 100%;
+      border-radius: 6px;
+    }
+
+    figcaption {
+      font-size: 0.9rem;
+      color: #ccc;
+      margin-top: 6px;
+    }
+
+    .meta {
+      font-size: 0.8rem;
+      color: #999;
+      margin-top: 4px;
+    }
+
+    .more {
+      text-align: center;
+      background-color: #151515;
+      padding: 20px;
+      border-radius: 8px;
+      margin-top: 50px;
+    }
+
+    .more h3 {
+      color: #f9d36b;
+      font-family: 'Playfair Display', serif;
+      margin-bottom: 8px;
+    }
+
+    .more a {
+      color: #111;
+      background-color: #B8906E;
+      padding: 8px 14px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    footer {
+      text-align: center;
+      color: #aaa;
+      font-size: 0.9rem;
+      padding: 20px 0;
+      border-top: 1px solid #222;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 768px) {
+      .story {
+        flex-direction: column;
+      }
+
+      .hero h1 {
+        font-size: 1.5rem;
+      }
+    }
+
+figure {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+figure:hover {
+  cursor: pointer;
+}
+
+figure:hover img {
+  transform: scale(1.08);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.15);
+}
+
+.photos figure img {
+  border: 3px solid rgba(212, 175, 55, 0.4); 
+  border-radius: 10px;
+  transition: all 0.4s ease;
+}
+
+.photos figure img:hover {
+  transform: scale(1.06);
+  border-color: #ffd700; 
+  box-shadow: 0 0 35px rgba(255, 215, 0, 0.6); 
+  cursor: pointer;
+}
+.section-title {
+  font-family: 'Cinzel', serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: 1.8rem;
+  color: #D0D0D0; 
+  opacity: 0.9;
+  text-align: center; 
+  margin-top: 10px; 
+  
+}
+
+.section-title:hover {
+  color: beige; 
+  opacity: 1;
+}
+.insta-btn {
+  display: inline-block;
+  background-color: #A47E63;
+  border: 1px solid #A47E63; 
+  color: #121212; 
+  padding: 10px 25px;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.9rem;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+  margin-top: 25px;
+  text-align: center;
+}
+
+.insta-btn:hover {
+  background-color: #D8BFAA; 
+  border-color: #D8BFAA; 
+  color: #121212; 
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(216, 191, 170, 0.3);
+}
+
+
+
+
+
+
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="title">THE FRAME JOURNAL</div>
+    <nav>
+      <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#story">My Story</a></li>
+        <li><a href="#styles">My Styles</a></li>
+        <li><a href="#more">More</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero" id="hero">
+    <div>
+      <h1 style="font-family: Georgia, 'Times New Roman', Times, serif;">Light remembers what time forgets</h1>
+      <p>What I see is not just light, but the quiet between moments.</p>
+    </div>
+  </section>
+
+  <div class="container">
+    <section class="story" id="story">
+      <img height="250px" src="TheCollege.jpg" alt="Artist">
+      <div class="story-text">
+        <h2 style="color: #bf8863;">About / Artist Statement</h2>
+        <p style=" font-family: 'Cormorant Garamond', serif; color: #AFAFAF;">
+          I’m Jatin, an engineering student at Newton School of Technology, and a photographer who found meaning in stillness. Photography started as curiosity and slowly became purpose. I picked up the camera to remember the small, honest corners; the hush after rain, the angle of morning light, the geometry of empty streets. What began as random frames turned into a way of seeing, a way of listening. Between circuits and classes, I learned that every photograph isn’t about perfection; it’s about presence; a quiet attempt to hold a fleeting moment before it disappears.
+        </p>
+      </div>
+    </section>
+
+    <section class="styles" id="styles">
+      <h2 class="section-title">THE ARCHIVE</h2>
+
+      <div class="category">
+        <h3 style="color: #B68F6A;">Roads & Machines</h3>
+        <div class="photos">
+          <figure>
+            <img src="TheBike.jpg" alt="Bike and Bull">
+            <figcaption><strong style="color: beige; opacity: 80%;">Somewhere on the way to Lonavala, I stopped to rest. The road was empty, just a few bulls walking slowly like they had nowhere to go. The wind was soft, the air smelled like dust and petrol. That moment felt peaceful in a weird way; calm but alive.</strong></figcaption>
+            <div class="meta">Lonavala — 2023</div>
+          </figure>
+          <figure>
+            <img src="TheAudi.jpg" alt="TheAudi">
+            <figcaption><strong style="color:beige;opacity: 80%;">I clicked this somewhere on a quiet, empty stretch outside Seville, Spain. The air was dry, the wind was soft, and the whole place felt like time had stopped for a while. The car stood still in that open space, under a sky that was slowly turning gold. There was no sound, no rush; just calm. It felt like one of those moments that don’t ask to be remembered, but you know you’ll never forget.</strong></figcaption>
+            <div class="meta">Spain — 2022</div>
+          </figure>
+        </div>
+      </div>
+
+      <div class="category">
+        <h3 style="color: #B68F6A;">Sunsets & Sunrises</h3>
+        <div class="photos">
+          <figure>
+            <img src="TheSunrise.jpg" alt="TheSunrise">
+            <figcaption><strong style="color: beige;opacity: 80%;">I shot this just before sunrise in Kanyakumari. The sea was still dark, but the horizon had already started to breathe in light. People stood silent, waiting, like they knew something holy was about to happen. When the first ray touched the water, it wasn’t loud or dramatic; it was slow, soft, and unreal. It felt like the world had just remembered how to begin again.</strong></figcaption>
+            <div class="meta">Kanyakumari — 2019</div>
+          </figure>
+          <figure>
+            <img src="TheSunset.jpg" alt="TheSunset">
+            <figcaption><strong style="color: beige;opacity: 80%;">I took this shot by the lake one quiet evening. The sky turned soft orange, and the light began to sink slowly into the water. Everything around felt still; the wind, the reflections, even time. The sunset didn’t rush; it simply dimmed, like the world was taking a slow breath before the night began.</strong></figcaption>
+            <div class="meta">Bhopal — 2025</div>
+          </figure>
+        </div>
+      </div>
+
+      <div class="category">
+        <h3 style="color: #B68F6A;">Walls & Stories</h3>
+        <div class="photos">
+          <figure>
+            <img src="TheTemple.jpg" alt="TheTemple">
+            <figcaption><strong style="color:beige;opacity: 80%;">I took this shot during my visit to Osian, near Jodhpur. The temple stands tall in sandstone; calm, ancient, and powerful. Every carving on it feels like it’s telling a story older than time. The sky that evening had this soft blue-grey tone that made the temple’s red stone glow even warmer. There’s a strange peace here; not loud, just quietly divine.</strong></figcaption>
+            <div class="meta">Jodhpur — 2025</div>
+          </figure>
+          <figure>
+            <img src="TheCat.jpg" alt="TheCat">
+            <figcaption><strong style="color: beige; opacity: 80%;">I found this small alley in Hyderabad one afternoon. The walls were old, the air was still, and this one cat sat right in the middle like it owned the place. I didn’t wait or plan; I just clicked. Sometimes a moment finds you before you even realize it’s special.</strong></figcaption>
+            <div class="meta">Hyderabad— 2019</div>
+          </figure>
+        </div>
+      </div>
+
+      <div class="category">
+        <h3 style="color: #B68F6A;">Light & Faith</h3>
+        <div class="photos">
+          <figure>
+            <img src="TheFireworks.jpg" alt="Dev Deepawali">
+            <figcaption><strong style="color: beige;opacity: 80%;">This was during Dev Deepawali in Varanasi. The whole river was glowing; diyas, fireworks, voices, everything mixing together. It was loud but peaceful at the same time. I clicked it because even in all that noise, there was a strange kind of calm.</strong></figcaption>
+            <div class="meta">Varanasi — 2024</div>
+          </figure>
+          <figure>
+            <img src="TheMoon.jpg" alt="TheMoon">
+            <figcaption><strong style="color: beige;opacity: 80%;">Took this on a night when I couldn’t sleep. The sky was moving fast, but the moon stayed calm. I held my camera still and clicked; maybe just to keep that calm for a bit longer. It’s simple, but it says a lot.</strong></figcaption>
+            <div class="meta">Ladakh — 2023</div>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <div class="more" id="more">
+      <h3 style="color: beige; margin-bottom:5px">These were some moments I’ve framed. If they made you pause for a second, you can find more stories waiting on my Instagram.</h3>
+      <a class="insta-btn" href="https://www.instagram.com/adventurein._.colors/" target="_blank">View on Instagram →</a>
+    </div>
+  </div>
+
+  <footer>
+    Every frame, a quiet document of time — Captured & Curated. © 2025
+  </footer>
+</body>
+</html>
